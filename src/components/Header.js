@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 import { SafeAreaView } from 'react-native';
 import propTypes from 'prop-types';
 
-const imgSource = require('../../../assets/images/logo.png');
+const imgSource = require('../../assets/images/logo.png');
 
 const Header = ({ children }) => (
   <Container>

@@ -1,13 +1,10 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-import SuggestionList from './src/videos/containers/SuggestionList';
-import CategoryList from './src/videos/containers/CategoryList';
-import Header from './src/sections/components/Header';
-import Home from './src/screens/containers/Home';
-import Player from './src/player/containers/Player';
-
-
+import SuggestionList from './src/components/SuggestionList';
+import CategoryList from './src/components/CategoryList';
+import Header from './src/components/Header';
+import Home from './src/screens/Home';
+import Player from './src/components/Player';
 import Api from './utils/api';
 
 const App = () => {

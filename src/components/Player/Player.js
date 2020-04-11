@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components/native';
 import VideoBase from 'react-native-video';
-import Loader from '../components/Loader';
-import ControlLayout from '../components/ControlLayout';
-import PlayPause from '../components/PlayPause';
-import Fullscreen from '../components/Fullscreen';
-import Progressbar from '../components/Progressbar';
+import Loader from './Loader';
+import ControlLayout from './ControlLayout';
+import PlayPause from './PlayPause';
+import Fullscreen from './Fullscreen';
+import Progressbar from './Progressbar';
 
 const Player = () => {
   const [isLoading, setLoading] = useState(true);

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import propTypes from 'prop-types';
-import Layout from '../components/CategoryListLayout';
-import EmptyMessage from '../components/EmptyMessage';
-import HorizontalSeparator from '../../sections/components/HorizontalSeparator';
-import Category from '../components/Category';
+import Layout from './CategoryListLayout';
+import EmptyMessage from '../EmptyMessage';
+import HorizontalSeparator from '../HorizontalSeparator';
+import Category from './Category';
 
 export default class CategoryList extends Component {
   EmptyMessage = <EmptyMessage text={'There aren\'t suggestions :('} />

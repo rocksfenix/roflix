@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components/native';
 import propTypes from 'prop-types';
-import Layout from '../components/SuggestionListLayout';
-import EmptyMessage from '../components/EmptyMessage';
-import Separator from '../components/VerticalSeparator';
-import Suggestion from '../components/Suggestion';
+import Layout from './SuggestionListLayout';
+import EmptyMessage from '../EmptyMessage';
+import Separator from '../VerticalSeparator';
+import Suggestion from './Suggestion';
 
 export default class SuggestionList extends Component {
   EmptyMessage = <EmptyMessage text="No hay Sugerencias :(" />
