@@ -2,4 +2,8 @@
 
 Simple react native app for playing videos.
 
-![screenshot roflix](./assets/images/screenshot.png)
+<img
+  src="./assets/images/screenshot.png"
+  alt="screenshot roflix"
+  width="250"
+/>
