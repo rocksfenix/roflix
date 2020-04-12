@@ -13,4 +13,10 @@ export default {
     const { data } = await query.json();
     return data.movies;
   },
+
+  async searchMovie(title) {
+    const query = await fetch(`${API_HOST}/list_movies.json?limit=1&sort_by_rating&query_term=${title}`);
+    const { data } = await query.json();
+    return data.movies;
+  },
 };

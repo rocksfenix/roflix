@@ -21,7 +21,7 @@ const Container = styled.View`
   justify-content: space-between;
   flex-direction: row;
   padding: 0px 10px;
-  height: 35;
+  height: 35px;
 `;
 
 export default ControlLayout;

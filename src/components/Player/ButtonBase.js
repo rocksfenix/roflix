@@ -32,9 +32,9 @@ ButtonBase.defaultProps = {
 const Touchable = styled.TouchableOpacity`
   justify-content: center;
   align-items: center;
-  padding: 0 10px;
-  height: 25;
-  width: 40;
+  padding: 0px 10px;
+  height: 25px;
+  width: 40px;
   margin: 5px;
 `;
 

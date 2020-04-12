@@ -33,6 +33,11 @@ Header.defaultProps = {
 
 const Container = styled.View`
   background-color: #0a0a0a;
+  /* flex: 1; */
+  /* flex-direction: row; */
+  
+  /* justify-content: space-between; */
+  /* align-items: center; */
 `;
 
 const Image = styled.Image`

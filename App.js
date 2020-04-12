@@ -1,37 +1,21 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
-import SuggestionList from './src/components/SuggestionList';
-import CategoryList from './src/components/CategoryList';
-import Header from './src/components/Header';
-import Home from './src/screens/Home';
-import Player from './src/components/Player';
-import Api from './utils/api';
+import { store, persistor } from './src/redux/store';
+import Loading from './src/components/Loading';
+import AppLayout from './src';
 
 const App = () => {
-  const [movies, setMovies] = React.useState([]);
-  const [categories, setCategories] = React.useState([]);
-
-  React.useEffect(() => {
-    (async () => {
-      const moviesResponse = await Api.getSuggestion(10);
-      const categoriesResponse = await Api.getMovies();
-
-      setMovies(moviesResponse);
-      setCategories(categoriesResponse);
-    })();
-  }, []);
-
   return (
-    <Home>
-      <Header />
-      <Player />
-      <CategoryList
-        list={categories}
-      />
-      <SuggestionList
-        list={movies}
-      />
-    </Home>
+    <Provider store={store}>
+      <PersistGate
+        loading={<Loading />}
+        persistor={persistor}
+      >
+        <AppLayout />
+      </PersistGate>
+    </Provider>
   );
 };
 

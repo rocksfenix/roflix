@@ -1,42 +1,48 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import propTypes from 'prop-types';
+import { TouchableOpacity } from 'react-native';
 
 const starPng = require('../../../assets/images/star.png');
 
 const Suggestion = ({
-  genres, title, year, rating, backgroundImage,
+  genres, title, year, rating, backgroundImage, onPress,
 }) => (
-  <Container>
-    <Cover
-      resizeMode="cover"
-      source={{ uri: backgroundImage }}
-    />
-    <Genre>
-      <GenreText>{ genres[1] }</GenreText>
-    </Genre>
-    <Right>
-      <Title>{ title}</Title>
-      <Year>{ year}</Year>
-      <Rating>
-        <RatingText>
-          { rating }
-        </RatingText>
-        <Star
-          source={starPng}
-          resizeMode="contain"
-        />
-      </Rating>
-    </Right>
-  </Container>
+  <TouchableOpacity
+    onPress={onPress}
+  >
+    <Container>
+      <Cover
+        resizeMode="cover"
+        source={{ uri: backgroundImage }}
+      />
+      <Genre>
+        <GenreText>{ genres[1] }</GenreText>
+      </Genre>
+      <Right>
+        <Title>{ title}</Title>
+        <Year>{ year}</Year>
+        <Rating>
+          <RatingText>
+            { rating }
+          </RatingText>
+          <Star
+            source={starPng}
+            resizeMode="contain"
+          />
+        </Rating>
+      </Right>
+    </Container>
+  </TouchableOpacity>
 );
 
 Suggestion.propTypes = {
   genres: propTypes.arrayOf(propTypes.string).isRequired,
   title: propTypes.string.isRequired,
-  year: propTypes.string.isRequired,
-  rating: propTypes.string.isRequired,
+  year: propTypes.number.isRequired,
+  rating: propTypes.number.isRequired,
   backgroundImage: propTypes.string.isRequired,
+  onPress: propTypes.func.isRequired,
 };
 
 Suggestion.defaultProps = {
@@ -48,7 +54,7 @@ const Container = styled.View`
 `;
 
 const Genre = styled.View`
-  left: 0;
+  left: 0px;
   top: 10px;
   padding: 5px 7px;
   position: absolute;
@@ -104,7 +110,7 @@ const RatingText = styled.Text`
 const Star = styled.Image`
   width: 12px;
   height: 12px;
-  margin: 0 5px;
+  margin: 0px 5px;
 `;
 
 export default Suggestion;
